@@ -1,0 +1,20 @@
+<Page loaded="pageLoaded" class="page page-light" navigatingTo="onNavigatingTo">
+
+	<ActionBar title="Страница регистрации" class="action-bar">
+	</ActionBar>
+	<ScrollView>
+	   <StackLayout> 
+			<StackLayout class="home-panel">
+				<TextField hint="Login" class="input input-border input-login"/>
+				<TextField hint="First Name" class="input input-border input-firstname"/>
+				<TextField hint="Last Name" class="input input-border input-lastname"/>
+				<TextField hint="Email" class="input input-border input-email"/>
+				<TextField hint="Password" secure="true" class="input input-border input-password"/>
+				<TextField hint="Confirm password" secure="true" class="input input-border input-confirmpassword"/>
+			</StackLayout>
+				<StackLayout>
+					<Button class="btn btn-primary" text="Зарегестироваться" tap="onNavigate" />
+				</StackLayout>
+       </StackLayout> 
+	</ScrollView>
+</Page>

@@ -1,0 +1,25 @@
+<Frame defaultPage="home/home-page"></Frame>
+
+<!-- <GridLayout rows="*, auto" columns="*" loaded="onLoaded">
+
+	<Frame row="0" defaultPage="page1/page1"/>
+
+	<GridLayout backgroundColor="#fff" visibility="visible" row="1" columns="*,*,*,*" id="bottomNavBar" class="bottom-nav">
+		<StackLayout id="page1" class="bottom-nav-btn-active" col="0" tap="{{ navigate }}">
+				<Label text="&#xe851;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 1" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+		<StackLayout id="page2" class="bottom-nav-btn" tap="{{ navigate }}" col="1">
+				<Label text="&#xe54c;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 2" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+		<StackLayout id="page3" class="bottom-nav-btn" tap="{{ navigate }}" col="2">
+				<Label text="&#xe0ca;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 3" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+		<StackLayout id="page4" class="bottom-nav-btn" tap="{{ navigate }}" col="3">
+				<Label text="&#xe7f7;" class="mdi bottom-nav-icon" textWrap="true" />
+				<Label text="Page 4" textWrap="true" class="bottom-nav-text" />
+		</StackLayout>
+	</GridLayout>
+</GridLayout> -->

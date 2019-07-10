@@ -1,0 +1,17 @@
+<Page loaded="onLoaded"  navigatingTo="onNavigatingTo">
+
+    <ActionBar title="Inot" class="action-bar">
+    </ActionBar>
+    <ScrollView>
+        <StackLayout class="home-panel">
+			<Label class="text-center black"
+				text="Добро пожаловать в наше приложение Inot!" textWrap="true"/>
+            <Image src="~/images/logo.png" width="100%" class="logo" />
+			<TextField hint="Email or Phone" class="input input-border input-login"/>
+			<TextField hint="Password" secure="true" class="input input-border input-login"/>    
+			<Button text="Вход" tap="onTap" class="btn btn-primary" />
+           
+            <Button class="btn btn-primary" text="Регистрация" tap="onNavigate" />
+		</StackLayout>  
+    </ScrollView>
+</Page>

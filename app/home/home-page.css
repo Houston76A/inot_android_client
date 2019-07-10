@@ -1,0 +1,8 @@
+.btn-primary {
+    height: 50;
+    margin: 40 1 1 1;
+    background-color: rgb(17, 145, 0);
+    border-radius: 5;
+    /*font-size: 20;
+    font-weight: 600;*/
+  }
