@@ -8,6 +8,17 @@ logic, and to set up your page’s data binding.
 // const dialogsModule = require("tns-core-modules/ui/dialogs");
 const {fromObjectRecursive} = require('tns-core-modules/data/observable')
 const application = require("tns-core-modules/application");
+const httpModule = require("tns-core-modules/http");
+const applicationModule = require("tns-core-modules/application");
+// const Button = require("tns-core-modules/ui/button").Button;
+
+// const myButton = new Button();
+// myButton.text = "Tap me!";
+// myButton.className = "btn btn-primary btn-active";
+// myButton.on("tap", (data) => {
+//     // args is of type EventData
+//     alert("Button Tapped!");
+// });
 
 var transitions;
 
@@ -45,6 +56,4 @@ exports.onTap = function (args) {
     }
   });
 }
-
-
 
