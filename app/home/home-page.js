@@ -27,13 +27,39 @@ transitions = [/*"curl", "curlDown", "fade", "flip", "flipLeft", */"slide"/*, "s
 } else {
   transitions = [/*"explode", "fade", "flip", "flipLeft", */"slide"/*, "slideRight", "slideTop", "slideBottom"*/];
 }
+const fromObject = require("tns-core-modules/data/observable").fromObject;
+let source = fromObject({ 
+  username: "123",
+  password: "321",
+});
+let view =  require("tns-core-modules/ui/core/view");
 
 exports.pageLoaded = function (args) {
     const page = args.object;
+    
+
+    const usernameTextField = view.getViewById(page, "username-text-field");
+
+    const usernameFieldBindingOptions = {
+      sourceProperty: "username",
+      targetProperty: "text",
+      twoWay: true
+    };
+    usernameTextField.bind(usernameFieldBindingOptions, source)
+
+    const passwordTextField = view.getViewById(page, "password-text-field");
+
+    const passwordFieldBindingOptions = {
+      sourceProperty: "password",
+      targetProperty: "text",
+      twoWay: true
+    };
+    passwordTextField.bind(passwordFieldBindingOptions, source)
   };
 
 
 exports.onNavigate = function (args) {
+  
   args.object.page.frame.navigate({
     moduleName: "registration/registration-page",
     animated: true,
@@ -46,14 +72,54 @@ exports.onNavigate = function (args) {
 }
 
 exports.onTap = function (args) {
-  args.object.page.frame.navigate({
-    moduleName: "chats/chats-page",
-    animated: true,
-    transition: {
-      name: transitions[Math.floor(Math.random() * transitions.length)],
-      duration: 100,
-      curve: "easeIn"
-    }
+  // console.log(source)
+  httpModule.request({
+      url: "http://botcoint.ru/sign_in_for_apk",
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      content: JSON.stringify({
+          login: source.username,
+          password:source.password
+      })
+  }).then((response) => {
+      console.log('good')
+      
+      const result = response.content.toJSON();
+      if (result.code == "0"){
+        console.log("Good authentication, your access key: "+result.access_key);
+        args.object.page.frame.navigate({
+          moduleName: "chats/chats-page",
+          animated: true,
+          transition: {
+            name: transitions[Math.floor(Math.random() * transitions.length)],
+            duration: 100,
+            curve: "easeIn"
+          }
+        });
+      }
+      else{
+        console.log('Username or password is wrong')
+      }
+       
+      
+  }, (e) => {
+    console.log('bad')
   });
+
+
+  
 }
 
+
+// httpModule.request({
+//   url: "botcoint.ru/sign_in_for_apk",
+//   method: "POST",
+//   headers: { "Content-Type": "application/home" },
+//   content: JSON.stringify({
+//       login: vm.get("login"),
+//       password: vm.get("password")
+//   })
+// }).then((response) => {
+//   const result = response.content.toJSON();
+// }, (e) => {
+// });

@@ -1,4 +1,4 @@
-<Page loaded="onLoaded"  navigatingTo="onNavigatingTo">
+<Page loaded="pageLoaded"  navigatingTo="onNavigatingTo">
 
     <ActionBar title="Inot" class="action-bar">
     </ActionBar>
@@ -7,8 +7,8 @@
 			<Label class="text-center black"
 				text="Добро пожаловать в наше приложение Inot!" textWrap="true"/>
             <Image src="~/images/logo.png" width="100%" class="logo" />
-			<TextField hint="Email or Phone" class="input input-border input-login" text="{{login}}"/>
-			<TextField hint="Password" secure="true" class="input input-border input-password" text="{{password}}"/>    
+			<TextField id="username-text-field"  hint="Email or Phone" class="input input-border input-login" text="{{ username }}"/>
+			<TextField id="password-text-field" hint="Password" secure="true" class="input input-border input-password" text="{{password}}"/>    
 			<Button text="Вход" class="btn btn-primary" tap="onTap"/>
             <Button text="Регистрация" class="btn btn-primary" tap="onNavigate" />
 		</StackLayout>  
