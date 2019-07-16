@@ -5,12 +5,12 @@
 	<ScrollView>
 	   <StackLayout> 
 			<StackLayout class="home-panel">
-				<TextField hint="Login" class="input input-border input-login"/>
-				<TextField hint="First Name" class="input input-border input-firstname"/>
-				<TextField hint="Last Name" class="input input-border input-lastname"/>
-				<TextField hint="Email" class="input input-border input-email"/>
-				<TextField hint="Password" secure="true" class="input input-border input-password"/>
-				<TextField hint="Confirm password" secure="true" class="input input-border input-confirmpassword"/>
+				<TextField id="login-text-field" hint="Login" class="input input-border input-login" text="{{ login }}"/>
+				<TextField id="firstname-text-field" hint="First Name" class="input input-border input-firstname" text="{{ firstname }}"/>
+				<TextField id="lastname-text-field" hint="Last Name" class="input input-border input-lastname" text="{{ lastname }}"/>
+				<TextField id="email-text-field" hint="Email" class="input input-border input-email" text="{{ email }}"/>
+				<TextField id="password-text-field" hint="Password" secure="true" class="input input-border input-password" text="{{ password }}"/>
+				<TextField id="confpassword-text-field" hint="Confirm password" secure="true" class="input input-border input-confirmpassword" text="{{ confpassword }}"/>
 			</StackLayout>
 				<StackLayout>
 					<Button class="btn btn-primary" text="Зарегестироваться" tap="onNavigate" />

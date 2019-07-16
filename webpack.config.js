@@ -211,8 +211,10 @@ module.exports = env => {
             // Copy assets to out dir. Add your own globs as needed.
             new CopyWebpackPlugin([
                 { from: { glob: "fonts/**" } },
+                { from: { glob: "certs/**" } },
                 { from: { glob: "**/*.jpg" } },
                 { from: { glob: "**/*.png" } },
+                { from: { glob: "**/*.cer" } }, // This one!
             ], { ignore: [`${relative(appPath, appResourcesFullPath)}/**`] }),
             // Generate a bundle starter script and activate it in package.json
             new nsWebpack.GenerateBundleStarterPlugin(

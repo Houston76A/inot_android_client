@@ -12,11 +12,17 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "dependencies": {
-    "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "~5.4.0"
+    "nativescript-pager": "9.5.4",
+    "nativescript-pro-ui": "3.4.1",
+    "nativescript-theme-core": "1.0.6",
+    "nativescript-toast": "2.0.0",
+    "nativescript-ui-sidedrawer": "6.0.0",
+    "nativescript-vue-devtools": "1.2.0",
+    "nativescript-vue-loader": "0.1.5",
+    "tns-core-modules": "5.4.3"
   },
   "devDependencies": {
-    "nativescript-dev-webpack": "~0.24.0"
+    "nativescript-dev-webpack": "0.24.1"
   },
   "gitHead": "8c1a4866a66daab09bf5ef8e5a96472687192373",
   "readme": "NativeScript Application"
